@@ -45,7 +45,7 @@ class PsaUsage(IntEnum):
     USAGE_DERIVE = 0x4000
     ENCRYPT_DECRYPT_EXPORT_COPY = 0x0303
     ENCRYPT_DECRYPT_EXPORT = 0x0301
-    SIGN_VERIFY_EXPORT = 0x3C01    
+    SIGN_VERIFY_EXPORT = 0x3C01
 
 
 class PsaCracenUsageSceme(IntEnum):
