@@ -32,8 +32,11 @@ class PsaKeyType(IntEnum):
 class PsaKeyBits(IntEnum):
     """Number of bits in the key"""
 
-    AES = 256
-    EDDSA = 255
+    AES128 = 128
+    AES256 = 256
+    AES = 256 # Deprecated
+    EDDSA = 255 # Deprecated
+    ED25519 = 255
     SECP256_R1 = 256
 
 
@@ -78,7 +81,7 @@ class PsaAlgorithm(IntEnum):
     NONE = 0
     CBC = 0x04404000
     EDDSA_PURE = 0x06000800
-    ECDSA = 0x06000600
+    ECDSA_SECP256_R1 = 0x06000609
     ECDH = 0x09020000
 
 
