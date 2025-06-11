@@ -25,7 +25,8 @@ class PsaKeyType(IntEnum):
 
     AES = 0x2400
     ECC_TWISTED_EDWARDS = 0x4142
-    RAW_DATA = 0x1001
+    ECC_CURVE_SECP_R1 = 0x7112
+    RAW_DATA = 0x1001 
 
 
 class PsaKeyBits(IntEnum):
@@ -33,6 +34,7 @@ class PsaKeyBits(IntEnum):
 
     AES = 256
     EDDSA = 255
+    SECP256_R1 = 256
 
 
 class PsaUsage(IntEnum):
@@ -43,7 +45,7 @@ class PsaUsage(IntEnum):
     USAGE_DERIVE = 0x4000
     ENCRYPT_DECRYPT_EXPORT_COPY = 0x0303
     ENCRYPT_DECRYPT_EXPORT = 0x0301
-    SIGN_VERIFY_EXPORT = 0x3C01
+    SIGN_VERIFY_EXPORT = 0x3C01    
 
 
 class PsaCracenUsageSceme(IntEnum):
@@ -76,6 +78,8 @@ class PsaAlgorithm(IntEnum):
     NONE = 0
     CBC = 0x04404000
     EDDSA_PURE = 0x06000800
+    ECDSA = 0x06000600
+    ECDH = 0x09020000
 
 
 class PlatformKeyAttributes:
